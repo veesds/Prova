@@ -1,0 +1,46 @@
+package com.company.model;
+
+import java.util.ArrayList;
+
+public class Pedido {
+    private String descricao;
+    private String data;
+    private double total;
+    private ArrayList<ItemPedido> itensPedido;
+
+    public Pedido() {
+        itensPedido = new ArrayList<ItemPedido>();
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public void setItemPedido(String nome, double preco, int qtde) {
+        ItemPedido item = new ItemPedido();
+        item.setProduto(nome, preco, qtde);
+        total += (preco * qtde);
+        itensPedido.add(item);
+    }
+    @Override
+    public String toString() {
+        return "\n\nPedido:" + descricao +
+                "\ndata:" + data + itensPedido +
+                "\ntotal:" +total;
+    }
+
+    public void setTotal() {
+    }
+}
