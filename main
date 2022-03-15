@@ -1,0 +1,37 @@
+package com.company;
+
+import com.company.model.Pedido;
+import com.company.model.Produto;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Pedido pedido1= new Pedido();
+        pedido1.setDescricao("integral");
+        pedido1.setData("15/02");
+        pedido1.setItemPedido("Trigo", 4, 2);
+        pedido1.setItemPedido("Arroz", 11, 1);
+        pedido1.setItemPedido("Frango", 15, 2);
+        pedido1.setItemPedido("Feijão", 8, 1);
+        pedido1.setItemPedido("Chocolate", 5, 2);
+        System.out.println(pedido1);
+
+
+        Pedido pedido2= new Pedido();
+        pedido2.setDescricao("Arroz");
+        pedido2.setData("15/02");
+        pedido2.setItemPedido("Arroz para sushi", 20, 2);
+        pedido2.setItemPedido("Nori", 18, 4);
+        pedido2.setItemPedido("Salmão", 250, 1);
+        pedido2.setItemPedido("kani", 7, 3);
+        pedido2.setItemPedido("atum", 100, 1);
+        pedido2.setItemPedido("shoyo", 4, 2);
+        pedido2.setItemPedido("vinagre de arroz", 6, 1);
+        pedido2.setItemPedido("Gergilin", 10, 1);
+        pedido2.setItemPedido("ferrero rocher", 20, 1);
+        System.out.println(pedido2);
+
+
+
+    }
+}
