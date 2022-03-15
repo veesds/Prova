@@ -1,0 +1,36 @@
+package com.company.model;
+
+public class ItemPedido {
+    public Produto produto;
+    public int quantidade;
+
+    public ItemPedido(){
+        produto = new Produto();
+    }
+
+
+    public Produto getProduto() {
+        return produto;
+    }
+
+    public void setProduto(String nome, double preco, int quantidade) {
+        produto.setNome(nome);
+        produto.setPreco(preco);
+        this.quantidade = quantidade;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    @Override
+    public String toString() {
+        return "\nItemPedido" + produto+
+                " \nquantidade:" + quantidade;
+    }
+
+}
